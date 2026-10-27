@@ -19,7 +19,7 @@ body {
     position: relative;
 }
 
-/* Логотип по центру */
+/* Логотип */
 
 .header img {
     display: block;
@@ -43,7 +43,7 @@ body {
     text-decoration: underline;
 }
 
-/* Основной блок архива */
+/* Архив статей */
 
 .archive > .archive {
     width: 960px;
@@ -53,7 +53,7 @@ body {
     margin-right: auto;
 }
 
-/* Основной блок отдельной статьи */
+/* Отдельная статья */
 
 .article-content {
     width: 960px;
@@ -63,7 +63,7 @@ body {
     margin-right: auto;
 }
 
-/* Блок одной записи */
+/* Блок одной статьи */
 
 .one-post {
     margin-bottom: 45px;
@@ -79,7 +79,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* Ссылки в заголовках */
+/* Ссылки в названиях статей */
 
 .post-title a {
     color: #ffffff;
@@ -97,20 +97,14 @@ body {
     margin-bottom: 20px;
 }
 
-/* Автор слева */
-
 .article-author {
     width: 50%;
     float: left;
 }
 
-/* Дата справа */
-
 .article-created-date {
     text-align: right;
 }
-
-/* Очистка обтекания */
 
 .article-info::after {
     content: "";
@@ -126,14 +120,12 @@ body {
     text-align: left;
 }
 
-/* Отступы между абзацами */
-
 .article-text p {
     margin-top: 0;
     margin-bottom: 16px;
 }
 
-/* Стили отдельной страницы */
+/* Стили страницы отдельной статьи */
 
 .article .post-title {
     font-size: 30px;
@@ -143,6 +135,104 @@ body {
 .article .article-text {
     font-size: 16px;
     line-height: 1.7;
+}
+
+/* ------------------------------- */
+/* Стили формы создания статьи     */
+/* ------------------------------- */
+
+.create-post .content {
+    width: 700px;
+    max-width: calc(100% - 40px);
+
+    margin: 0 auto 60px;
+}
+
+.create-post h1 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.create-post form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Подписи полей */
+
+.create-post label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Поле названия статьи */
+
+.create-post input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 12px;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 16px;
+
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #333333;
+}
+
+/* Поле текста статьи */
+
+.create-post textarea {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 12px;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 16px;
+
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #333333;
+
+    resize: vertical;
+}
+
+/* Кнопка сохранения */
+
+.create-post input[type="submit"] {
+    width: 220px;
+    padding: 12px 20px;
+
+    border: none;
+    border-radius: 5px;
+
+    background: #23796e;
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.create-post input[type="submit"]:hover {
+    background: #176156;
+}
+
+/* Сообщение об ошибке */
+
+.form-errors {
+    margin-top: 20px;
+    padding: 15px;
+
+    background: #b83b3b;
+    color: #ffffff;
+
+    border-radius: 5px;
+    font-size: 16px;
 }
 
 /* Адаптация для небольших экранов */
@@ -156,6 +246,7 @@ body {
     .all-posts {
         position: static;
         display: block;
+
         text-align: center;
         margin-top: 20px;
     }
@@ -176,5 +267,13 @@ body {
     .article-created-date {
         text-align: left;
         margin-top: 8px;
+    }
+
+    .create-post h1 {
+        font-size: 25px;
+    }
+
+    .create-post input[type="submit"] {
+        width: 100%;
     }
 }

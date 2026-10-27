@@ -17,6 +17,12 @@ urlpatterns = [
     ),
 
     path(
+        'article/new/',
+        views.create_post,
+        name='create_post'
+    ),
+
+    path(
         'article/<int:article_id>/',
         views.get_article,
         name='get_article'
